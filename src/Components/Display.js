@@ -1,0 +1,16 @@
+function Display ({ userData }) {
+  return (
+    <div>
+      <h1>{userData.name}</h1>
+      <img src={userData.avatar_url} alt='profile' />
+      <a href={userData.html_url} target='blank'>
+        <h3>Profile page</h3>
+      </a>
+      {userData.location && <h3>Location: {userData.location}</h3>}
+      {userData.email && <h3>Email: {userData.email}</h3>}
+      {userData.hireable && <h3>Hireable {userData.hireable}</h3>}
+    </div>
+  )
+}
+
+export default Display
